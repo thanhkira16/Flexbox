@@ -1,0 +1,287 @@
+.box {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    height: 50%;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.box1:hover img {
+    transform: translateX(25px);
+    animation: moveImgBox1 2s ease;
+}
+
+.box1:hover .box1-desc {
+    transform: translateY(-20px);
+    opacity: 1;
+    animation: movetotop 2s ease;
+}
+
+.box1:hover::before {
+    background-color: transparent;
+    /* Changed from none to transparent */
+    animation: box1Before 10s ease;
+}
+
+.box1 {
+    overflow: hidden;
+}
+
+.box1::before {
+    top: 0;
+    z-index: 1;
+    right: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    background-color: hsla(0, 100%, 90%, 0.3);
+}
+
+.box1:hover .box1-title {
+    transform: translateY(-20px);
+    animation: moveTitle 1s ease;
+}
+
+.box1:hover {
+    background-color: none;
+}
+
+.box1 img {
+    scale: 1.4;
+}
+
+.box1-body {
+    position: absolute;
+    bottom: -64px;
+    left: 50px;
+    padding: 20px;
+    width: 100%;
+    height: 50%;
+    color: #fff;
+
+}
+
+.box1-desc {
+    opacity: 0;
+}
+
+@keyframes movetotop {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveTitle {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes moveImgBox1 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateX(25px);
+    }
+}
+
+@keyframes box1Before {
+    from {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    to {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+.box2 {
+    overflow: hidden;
+}
+
+.box2::before {
+    background: linear-gradient(to bottom, rgba(65, 75, 125, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    top: 200px;
+    z-index: 1;
+    right: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.box2:hover::before {
+    background: linear-gradient(to bottom, rgba(45, 46, 50, 0) 0%, rgba(109, 118, 159, 0.8) 75%);
+    top: 100px;
+}
+
+.box2-title {
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    left: 32%;
+    width: 100%;
+    color: #484c61;
+    transition: color 0.5s;
+    /* Added transition for color */
+}
+
+.box2-desc {
+    position: absolute;
+    z-index: 2;
+    bottom: -100px;
+    left: 10px;
+    padding: 2em;
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+    transition: bottom 0.5s, color 0.5s;
+    /* Added transition for bottom position and color */
+}
+
+.box2:hover h2 {
+    color: #fff;
+    top: 30%;
+}
+
+.box2:hover .box2-desc {
+    bottom: 0px;
+    color: #fff;
+}
+
+.box2 img {
+    transform: scale(1.2);
+    /* Corrected scale property */
+    transition: transform 0.5s;
+    /* Added transition for scale */
+}
+
+@keyframes moveH2box2 {
+    from {
+        top: 40%;
+    }
+
+    to {
+        top: 30%;
+    }
+}
+
+@keyframes moveBox2Desc {
+    from {
+        bottom: -10px;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}
+
+
+
+.box3 {
+    overflow: hidden;
+
+}
+
+.box3-title {
+    color: #fff;
+    position: absolute;
+    bottom: 100px;
+    z-index: 1;
+    margin-left: 40px;
+}
+
+.box3:hover .box3-title {
+    bottom: 70px;
+    animation: moveBox3Title 2s ease-in-out;
+}
+
+.box3::before {
+    background: linear-gradient(to bottom, rgba(65, 75, 125, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    top: 200px;
+    z-index: 1;
+    right: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* Corrected display property */
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.box3 img {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.box3::after {
+    content: "";
+    position: absolute;
+    bottom: -41px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #fff;
+
+    z-index: 1;
+}
+
+.box3:hover::after {
+    bottom: 0px;
+}
+
+.box3:hover::before {
+    display: block;
+}
+
+/* Keyframes for before and after pseudo-elements */
+@keyframes moveBefore {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveAfter {
+    from {
+        bottom: -41px;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}
+
+@keyframes moveBox3Title {
+    from {
+        bottom: 100px;
+    }
+
+    to {
+        bottom: 70px;
+    }
+}

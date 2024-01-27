@@ -10,6 +10,7 @@
 }
 
 .btn-custom {
+    cursor: pointer;
     display: block;
     border: 2px solid #F26464;
     border-radius: 25px;
@@ -49,7 +50,9 @@
     transition-delay: 0s;
     transition-duration: 0.4s;
     transition-property: all;
+    transform: scale(0.5);
     transition-timing-function: ease;
+
 }
 
 .logo {
@@ -108,6 +111,8 @@
     color: #FFF;
     cursor: pointer;
 }
+
+
 
 /* Banner  */
 

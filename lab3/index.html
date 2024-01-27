@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            /* flex-direction: column-reverse;
+            flex-wrap: wrap-reverse; */
+            /* flex-wrap: wrap; */
+            /* align-content: space-around; */
+            align-items: center;
+            list-style: none;
+
+            padding: 0;
+            width: 50vw;
+            height: 500px;
+            border: 1px solid #333;
+        }
+
+        .flex-item {
+            flex-shrink: 1;
+            width: 100px;
+            height: 200px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .flex-item-1 {
+            flex-shrink: 2;
+            width: 100px;
+            height: 100px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The ul with six li elements -->
+    <ul class="flex-container">
+        <li class="flex-item">Item 1</li>
+        <li class="flex-item">Item 2</li>
+        <li class="flex-item-1">Item 1</li>
+
+        <li class="flex-item-1">Item 4</li>
+        <li class="flex-item-1">Item 5</li>
+        <li class="flex-item-1">Item 6</li>
+    </ul>
+
+</body>
+
+</html>
